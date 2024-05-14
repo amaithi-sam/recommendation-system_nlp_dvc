@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "recommendation-system-nlp-dvc"
+version = "0.1.0"
+description = ""
+authors = ["amaithi-sam <amaithichirasan.s@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+scikit-learn = "^1.4.2"
+pandas = "^2.2.2"
+streamlit = "^1.34.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
