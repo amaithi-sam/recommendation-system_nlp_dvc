@@ -1,0 +1,11 @@
+base:
+  name: Bigbasket product recommendation system
+
+data_source:
+  raw_data_source: data\BigBasket Products.csv
+  preprocessed_data_source: data\processed_data\data_prepared.csv
+
+  data_sample: 12000
+recommendation:
+  recommend_data: recommendationService\recommend.csv
+  cosine_model_path: recommendationService

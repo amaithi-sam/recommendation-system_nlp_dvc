@@ -1,0 +1,32 @@
+schema: '2.0'
+stages:
+  dvc_pipeline (Bigbasket Recommendation System):
+    cmd:
+    - poetry run python src\\dataPreparation.py --config=params.yaml
+    - poetry run python src\\modelDevelopment.py --config=params.yaml
+    deps:
+    - path: data\BigBasket Products.csv
+      hash: md5
+      md5: 1e3e9c298fe8b85ba1eea5c66b3bb6a5
+      size: 16739247
+    - path: src\dataPreparation.py
+      hash: md5
+      md5: f8dcf9fccbb1b03a7c5d65a8ac87ccf7
+      size: 2238
+    - path: src\getData.py
+      hash: md5
+      md5: c6ab9da74e20f91b039e6244e5e05f2f
+      size: 669
+    - path: src\modelDevelopment.py
+      hash: md5
+      md5: 841431f547a39fe9d90dd5411320036e
+      size: 1536
+    outs:
+    - path: recommendationService\cosine_sim.joblib
+      hash: md5
+      md5: e33b32dc55b1145d56e1c65a7fce1b56
+      size: 1139745009
+    - path: recommendationService\recommend.csv
+      hash: md5
+      md5: 50532fd723881973ee770c997617b46a
+      size: 6967183

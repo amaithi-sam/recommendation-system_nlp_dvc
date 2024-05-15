@@ -1,0 +1,14 @@
+stages:
+  dvc_pipeline (Bigbasket Recommendation System):
+    cmd:
+      - poetry run python src\\dataPreparation.py --config=params.yaml
+      - poetry run python src\\modelDevelopment.py --config=params.yaml
+
+    deps:
+      - src\getData.py
+      - src\dataPreparation.py
+      - src\modelDevelopment.py
+      - data\BigBasket Products.csv
+    outs:
+      - recommendationService\recommend.csv
+      - recommendationService\cosine_sim.joblib
