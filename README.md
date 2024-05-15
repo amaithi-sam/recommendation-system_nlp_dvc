@@ -19,7 +19,8 @@ s
 ## GUI reference
 
 Streamlit gui
-![App Screenshot](images/upload.mp4)
+https://github.com/amaithi-sam/recommendation-system_nlp_dvc/assets/77726326/0420c80d-45ad-4333-8ebc-0f3aa7b6c490
+
 
 ## Screenshots
 
